@@ -13,7 +13,7 @@
     `:n.innerHTML=`
       <div class="guide-overlay">
         <div class="guide-header">
-          <img src="/apple-touch-icon.png" alt="App Logo" class="app-logo-preview" />
+          <img src="./apple-touch-icon.png" alt="App Logo" class="app-logo-preview" />
           <h1 class="guide-title">ホーム画面に追加して起動</h1>
           <p class="guide-desc">
             このアプリを使用するには、ホーム画面への追加が必要です。<br>ブラウザ内からの操作はできません。
@@ -39,4 +39,4 @@
       <button id="toggle-mode" class="debug-toggle">
         ${s==="browser"?"自動判定に戻す":"成功画面をプレビュー"}
       </button>
-    `,(i=document.getElementById("toggle-mode"))==null||i.addEventListener("click",()=>{s===null?s=r?"browser":"standalone":s=null,a()})}"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").then(n=>console.log("SW Registered:",n)).catch(n=>console.error("SW Registration failed:",n))});a();window.matchMedia("(display-mode: standalone)").addEventListener("change",()=>{a()});
+    `,(i=document.getElementById("toggle-mode"))==null||i.addEventListener("click",()=>{s===null?s=r?"browser":"standalone":s=null,a()})}"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("./sw.js").then(n=>console.log("SW Registered:",n)).catch(n=>console.error("SW Registration failed:",n))});a();window.matchMedia("(display-mode: standalone)").addEventListener("change",()=>{a()});
